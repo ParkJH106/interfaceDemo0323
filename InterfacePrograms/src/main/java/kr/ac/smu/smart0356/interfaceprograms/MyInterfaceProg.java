@@ -15,20 +15,11 @@ public class MyInterfaceProg {
         System.out.println("Average balance: " + averge(countries));
     }
 
-    private static double averge(Country[] objects) {
+    private static double averge(Measurable[] objects) {
         if (objects.length == 0) { return 0;}
         double sum = 0;
-        for (Country obj : objects) {
-            sum = sum + obj.getArea();
-        }
-        return sum/ objects.length;
-    }
-
-    private static double averge(BankAccount[] objects) {
-        if (objects.length == 0) { return 0;}
-        double sum = 0;
-        for (BankAccount obj : objects) {
-            sum = sum + obj.getBalance();
+        for (Measurable obj : objects) {
+            sum = sum + obj.getMeasure();
         }
         return sum/ objects.length;
     }
